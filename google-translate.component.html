@@ -1,0 +1,18 @@
+<div id="google_translate_element" style="display:none"></div>
+
+<div class="language-selector">
+  <div class="select-wrapper">
+    <i class="fa fa-language language-icon" aria-hidden="true"></i>
+    <select #langSelect 
+            (change)="changeLanguage(langSelect.value)" 
+            class="custom-select notranslate" 
+            translate="no">
+      <option value="" disabled [selected]="!currentLang">Select Language</option>
+      <option *ngFor="let lang of languages" 
+              [value]="lang.code" 
+              [selected]="lang.code === currentLang">
+        {{ lang.name }}
+      </option>
+    </select>
+  </div>
+</div>

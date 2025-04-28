@@ -1,0 +1,55 @@
+body {
+  top: 0px !important;
+}
+
+
+.language-selector {
+  position: relative;
+  width: 200px;
+  margin: 8px auto;
+
+  .select-wrapper {
+    position: relative;
+  }
+
+  .language-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+    pointer-events: none; // Icon click na ho
+  }
+
+  select.custom-select {
+    appearance: none;
+    width: 100%;
+    padding: 8px 30px 8px 35px; // left padding zyada taaki icon ki jagah mile
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    line-height: 20px;
+    box-sizing: border-box;
+
+    &:hover {
+      border-color: #888;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #4CAF50;
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+  }
+}
